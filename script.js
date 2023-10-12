@@ -68,7 +68,13 @@ function updateTimer() {
     const timerDisplay = document.getElementById("timer");
     timerDisplay.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
 }
-
+function refresh(){
+    stopTimer();
+    minutes=0;
+    seconds=0;
+    updateTimer();
+    counter=CARDS.length + 94;
+}
 
 window.onload = function () {
     updateTimer();
@@ -100,6 +106,7 @@ function lose() {
     isLose = true;
     modalTitle.innerHTML = 'You lose 😢😩';
     modal.classList.add('modal--open');
+    refresh();
 }
 function handleClick(e) {
     const { target } = e;
@@ -167,7 +174,7 @@ function drawCards() {
           <div class="card__back">
             <img
               class="back__img"
-              src="https://cdn.discordapp.com/attachments/1098065523998216242/1161858958043119776/logo1.png?ex=6539d479&is=65275f79&hm=0f0a376bbf69f9a08d59c9758b77de78b70fff78982f06f3dcc8e93fa6b33180&"
+              src="https://dev.khoavang.vn/resources/uploads/black-friday/logo1-1697097986.png"
               alt="Thought"
             />
           </div>
@@ -217,13 +224,7 @@ $("#dataForm").submit(function(e) {
     modal.classList.remove('modal--open');
     modalSuccess.classList.add('modal--open');
   });
-function refresh(){
-    stopTimer();
-    minutes=0;
-    seconds=0;
-    updateTimer();
-    counter=CARDS.length + 94;
-}
+
 drawCards();
 
 
