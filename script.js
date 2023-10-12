@@ -248,8 +248,4 @@ $("#dataForm").submit(function(e) {
 console.log(":tao lka bi bao")
 drawCards();
 
-function toitengi(){
-    return 0;
-}
-
 
