@@ -245,7 +245,7 @@ $("#dataForm").submit(function(e) {
     modal.classList.remove('modal--open');
     modalSuccess.classList.add('modal--open');
   });
-
+console.log(":tao lka bi bao")
 drawCards();
 
 
