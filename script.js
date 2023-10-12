@@ -36,9 +36,11 @@ const cardContainer = document.querySelector('.card-container');
 const available = document.querySelector('#available');
 const modalTitle = document.querySelector('#modal-title');
 const modal = document.querySelector('#modal');
+const modalInfoUser = document.querySelector('#modalInfoUser');
+const modalSuccess = document.querySelector('#modalSuccess');
 let currentCards = [...CARDS, ...CARDS];
 let isPaused = false;
-let counter = CARDS.length + 94;
+let counter = CARDS.length -5;
 let isLose = false;
 let timer;
 let seconds = 0;
@@ -175,6 +177,13 @@ function drawCards() {
     });
 }
 
+// document.querySelector('#play-again').addEventListener('click', function () {
+//     modal.classList.remove('modal--open');
+//     isPaused = false;
+//     isLose = false;
+//     counter = CARDS.length + 10;
+//     drawCards();
+// });
 document.querySelector('#play-again').addEventListener('click', function () {
     modal.classList.remove('modal--open');
     isPaused = false;
@@ -182,7 +191,39 @@ document.querySelector('#play-again').addEventListener('click', function () {
     counter = CARDS.length + 10;
     drawCards();
 });
+document.querySelector('#take-gift').addEventListener('click', function () {
+    modal.classList.remove('modal--open');
+    modalInfoUser.classList.add('modal--open');
+    isPaused = false;
+    isLose = false;
+    refresh();
+    drawCards();
+});
+document.querySelector('#btn-close').addEventListener('click',function (){
+    modalInfoUser.classList.remove('modal--open');
+    isPaused = false;
+    isLose = false;
+    refresh(); 
+    drawCards();
+})
+$("#dataForm").submit(function(e) {
+    e.preventDefault(); // ngăn chặn việc tải lại trang
 
+    // Get values from the input fields
+    var name = $("#name").val();
+    var phone = $("#phone").val();
+
+    // Perform data processing here (e.g., send data to server, etc.)
+    modal.classList.remove('modal--open');
+    modalSuccess.classList.add('modal--open');
+  });
+function refresh(){
+    stopTimer();
+    minutes=0;
+    seconds=0;
+    updateTimer();
+    counter=CARDS.length + 94;
+}
 drawCards();
 
 

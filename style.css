@@ -159,17 +159,18 @@ grid-template-rows: repeat(3, auto);
   transform: translateY(0);
 }
 
+
 .modal-container {
   align-items: center;
   background-color: var(--white);
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
-  height: 12rem;
+  height: 260px;
   justify-content: center;
   max-width: 20rem;
-  padding: 1rem;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .modal-title {
@@ -195,4 +196,17 @@ grid-template-rows: repeat(3, auto);
 .button:active {
   background-color: var(--white);
   color: var(--blue);
+}
+input{
+  margin-bottom: 5px;
+}
+
+
+.close-btn{
+  width: 100%;
+  text-align: right;
+}
+.close{
+  margin-right: 10px; 
+  border: none;
 }
