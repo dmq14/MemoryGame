@@ -46,6 +46,7 @@ let timer;
 let seconds = 0;
 let minutes = 0;
 
+
 function startTimer() {
     if (!timer) {
         timer = setInterval(updateTimer, 1000);
@@ -213,14 +214,34 @@ document.querySelector('#btn-close').addEventListener('click',function (){
     refresh(); 
     drawCards();
 })
+function checkTime(minutes,seconds){
+    var CodeWin={
+        'code':'',
+        'description':''
+    }
+       
+    if(minutes==0&seconds<=30){
+        
+         CodeWin.code='SALE-KL12'
+         CodeWin.description='Mã giảm giá 300K'
+    }else if(minutes==0&seconds<=60){
+        CodeWin.code= 'SALE-GH78';
+        CodeWin.description='Mã giảm giá 200K'
+    }else{
+        CodeWin.code= 'SALE-CD34';
+        CodeWin.description='Mã giảm giá 100K'
+    }
+    return CodeWin;
+}
 $("#dataForm").submit(function(e) {
     e.preventDefault(); // ngăn chặn việc tải lại trang
-
     // Get values from the input fields
     var name = $("#name").val();
     var phone = $("#phone").val();
-
-    // Perform data processing here (e.g., send data to server, etc.)
+    var CodeWin=checkTime(minutes,seconds);
+    checkTime(minutes,seconds)
+    const info= `${name}' ${phone}s`;
+    success.innerHTML = `alo : ${info} ---- ${CodeWin.code}`;
     modal.classList.remove('modal--open');
     modalSuccess.classList.add('modal--open');
   });
