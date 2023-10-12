@@ -251,5 +251,7 @@ drawCards();
 function toitengi(){
     return 0;
 }
+console.log(0)
+
 
 
