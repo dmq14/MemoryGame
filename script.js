@@ -248,4 +248,8 @@ $("#dataForm").submit(function(e) {
 
 drawCards();
 
+function toitengi(){
+    return 0;
+}
+
 
