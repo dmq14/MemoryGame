@@ -44,15 +44,15 @@
                 </div>
                 <div class="content-right">
                     <div class="timeDown">
-                        <h1 class="title-time">Thời Gian Còn Lại : <span id="timer">0:00</span></h1>
+                        <h1 class="title-time">Thời Gian : <span id="timer">0:00</span></h1>
                     </div>
                     <div class="movement">
-                        <h3 class="subtitle">Số Bước Còn Lại :</h3>
-                        <div class="available" style="font-family: fangsong; " id="available"></div>
+                        <h3 class="subtitle">Số bước còn lại :</h3>
+                        <div class="available" id="available"></div>
                     </div>
                     <div class="instructions">
                         <h2>Thể lệ trò chơi</h2>
-                        <p style="font-family: fangsong; text-align: justify;">
+                        <p>
                             - 1 lần sẽ lật 2 ảnh</br>
                             - 2 ảnh giống nhau thì sẽ biến mất</br>
                             - 2 ảnh không giống nhau thì lật lại để tìm ảnh giống nhau (kiểu. người chơi phải nhớ vị
@@ -63,7 +63,6 @@
                             - Dựa vào thời gian để tính số tiền giảm:</br>
                             + Dưới 30s: giảm 300K</br>+ Từ 30s đên 60s: giảm 200K</br> + Trên 60s: giảm 100K</p>
                     </div>
-
                 </div>
                 <div class="introGameMobile">
                     <h2>Thể lệ trò chơi</h2>
@@ -71,8 +70,7 @@
                         - 1 lần sẽ lật 2 ảnh</br>
                         - 2 ảnh giống nhau thì sẽ biến mất</br>
                         - 2 ảnh không giống nhau thì lật lại để tìm ảnh giống nhau (kiểu. người chơi phải nhớ vị
-                        trí
-                        ảnh mình đã lật)</br>
+                        trí ảnh mình đã lật)</br>
                         - Số lượng ảnh: 12 ảnh</br>
                         - Thời gian chơi: 3 phút</br>
                         - Dựa vào thời gian để tính số tiền giảm:</br>
@@ -90,7 +88,7 @@
         <div class="modal" id="modalInfoUser">
             <div class="modal-container">
                 <div class="close-btn">
-                    <button type="button btn-close" class="close" id="btn-close-user-info">
+                    <button type="button" class="close" id="btn-close-user-info">
                         &times;
                     </button>
                 </div>
@@ -109,19 +107,16 @@
         </div>
         <div class="modal" id="modalSuccess">
             <div class="modal-container">
-                <div class="close-btn close-btn2">
+                <div class="close-btn">
                     <button type="button" class="close" id="btn-close-succsess-modal">&times;</button>
                 </div>
                 <h4 class="modal-title " style="font-weight: bolder;">Cảm ơn bạn đã tham gia chương trình</h4>
                 <h4 class="modal-title" id="success"></h4>
-                <button id="copyButton" onclick="copyCouponCode()" class="button">Sao Chép</button>
                 <h4 class="modal-title" id="coupon" style="font-weight: bold;"></h4>
+                <button id="copyButton" onclick="copyCouponCode()" class="button">Sao Chép</button>
             </div>
         </div>
         <!-- Button trigger modal -->
-
-
-        
     </div>
     <script src="script.js"></script>
 </body>
@@ -145,4 +140,3 @@
         copyButton.innerHTML = `Đã Sao Chép`;
     }
 </script>
-

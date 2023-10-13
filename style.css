@@ -92,7 +92,9 @@ body {
   border-radius: 10px;
   justify-content: center;
 }
-
+.dataForm{
+  width: 60%;
+}
 .subtitle {
  
   color: var(--bridal-heath);
@@ -208,22 +210,29 @@ body {
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
-  height: 50%;
-  justify-content: center;
-  width: 50%;
+
+  padding: 10px 10px 0;
+  
+  width: 400px;
+  height: 400px;
   box-sizing: border-box;
 }
 
 .modal-title {
   color: var(--dark-gray);
-  font-size: 2rem;
+  font-size: 20px;
   font-weight: 400;
   line-height: 1.2;
   margin-bottom: 1rem;
+  padding-top: 20px;
+  text-align: center;
+}
+#modal-title{
+  margin-top: 40px;
 }
 .titleUserForm{
   font-family: "Josefin Sans", sans-serif;
-  font-size: 4vw;
+  font-size: 30px;
   margin: 0;
   padding-bottom: 0.5rem;
   letter-spacing: 0.3rem;
@@ -247,7 +256,7 @@ body {
  font-family: inherit;
  display: inline-block;
  width: 8em;
- height: 2.6em;
+ height: 50px;
  line-height: 2.5em;
  margin: 20px;
  position: relative;
@@ -315,6 +324,7 @@ button:before {
 .close{
   margin-right: 10px; 
   border: none;
+  font-size: 40px!important;
 }
 .instructions{
   font-size: 15px;
@@ -353,8 +363,16 @@ button:before {
   width: 15%;
   color: #fff
 }
-
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
+  .modal-container{
+    padding-top: 47px;
+    width: 400px;
+    height: 400px;
+  }
+  .titleUserForm{
+    font-size: 30px;
+   
+  }
   .close-btn{
     margin-top: -47px;
   }
@@ -372,19 +390,26 @@ button:before {
   }
   .modal-title {
     font-size: 25px;
-    padding: 15px;
+   
   }
   }
  
-@media screen and (max-width: 768px) {
-  .close-btn {
-    margin-top: -65px;
+@media screen and (max-width: 769px) {
+  .modal-container{
+    padding-top: 40px;
+    width: 320px;
+    height: 320px;
+  }
+  .titleUserForm{
+    font-size: 25px;
+  }
+  
+.modal-title{
+  padding: 0 5px;
+  font-size: 20px;
 }
 .close-btn2 {
   margin-top: -1px;
-}
-.modal-container {
-  height: 58%;
 }
 .card{
   height: 9.5rem;
@@ -422,22 +447,24 @@ h2{
 }
 }
 @media screen and (max-width:600px){
+  .modal-container{
+    width: 350px;
+    height: 350px;
+  }
   .main-content{
     display: flex;
     flex-direction: column;
   }
   .close-btn {
-    margin-top: -104px;
+   padding-top: 10px;
 }
 .close-btn2 {
   margin-top: 1px;
 }
-.modal-container {
-  height: 60%;
-}
+
 .modal-title {
-  font-size: 25px;
-  padding: 10px;
+  font-size: 20px;
+  padding-top: 10px;
 }
   .introGameMobile{
     display: inline;
@@ -493,22 +520,19 @@ h2{
 }
 }
 @media screen and (max-width:450px){
+  .modal-container{
+    width: 350px;
+    height: 350px;
+  }
   .main-content{
     display: flex;
     flex-direction: column;
   }
-  .close-btn {
-    margin-top: -66px;
-    margin-right: -23px;
-}
+  
 .modal-title {
   font-size: 17px;
 }
-  .modal-container{
-    height: 50%;
-    padding: 10px;
-    width: 70%;
-  }
+  
   .introGameMobile{
     display: inline;
     font-size: 15px;
