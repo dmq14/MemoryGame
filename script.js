@@ -40,7 +40,7 @@ const modalInfoUser = document.querySelector('#modalInfoUser');
 const modalSuccess = document.querySelector('#modalSuccess');
 let currentCards = [...CARDS, ...CARDS];
 let isPaused = false;
-let counter = CARDS.length -5;
+let counter = CARDS.length +54;
 let isLose = false;
 let timer;
 let seconds = 1;
@@ -105,14 +105,16 @@ function shuffle(array) {
 function win() {
     isPaused = true;
     stopTimer(); 
-    const timeTaken = `${minutes}' ${seconds}s`;
-    modalTitle.innerHTML = `You win! 🙌🥳\nTime taken: ${timeTaken}`;
+    let p = 3 - minutes;
+    let s = 60 - seconds;
+    const timeTaken = `${p}' ${s}s`;
+    modalTitle.innerHTML = `Bạn đã chiến thắng! 🙌🥳\nThời gian: ${timeTaken}`;
     modal.classList.add('modal--open');
 }
 
 function lose() {
     isLose = true;
-    modalTitle.innerHTML = 'You lose 😢😩';
+    modalTitle.innerHTML = 'Thất bại!!! 😢😩';
     modal.classList.add('modal--open');
     refresh();
 }
@@ -145,6 +147,9 @@ function handleClick(e) {
             console.log('counter', counter);
             counter -= 1;
             available.innerHTML = counter;
+            if (minutes === 0 & seconds === 0){
+                lose();
+            }
             if (counter === 0) {
                 lose();
             }
