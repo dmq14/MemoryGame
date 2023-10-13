@@ -39,9 +39,11 @@ const modalTitle = document.querySelector('#modal-title');
 const modal = document.querySelector('#modal');
 const modalInfoUser = document.querySelector('#modalInfoUser');
 const modalSuccess = document.querySelector('#modalSuccess');
+const takeGift = document.querySelector('#take-gift');
+
 let currentCards = [...CARDS, ...CARDS];
 let isPaused = false;
-let counter = CARDS.length -5;
+let counter = CARDS.length +24;
 let isLose = false;
 let timer;
 let seconds = 1;
@@ -72,7 +74,9 @@ function updateTimer() {
         } else {
             seconds--;
         }
-
+        if (minutes === 0 & seconds === 0){
+            lose();
+        }
         const timerDisplay = document.getElementById("timer");
         const timerDisplayMobile = document.getElementById("timer-mobile");
         timerDisplay.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
@@ -84,7 +88,7 @@ function refresh(){
     minutes=3;
     seconds=1;
     updateTimer();
-    counter=CARDS.length + 94;
+    counter=CARDS.length + 24;
 }
 
 window.onload = function () {
@@ -110,14 +114,15 @@ function win() {
     stopTimer(); 
     let p = 3 - minutes;
     let s = 60 - seconds;
-    const timeTaken = `${p}' ${s}s`;
-    modalTitle.innerHTML = `Bạn đã chiến thắng! 🙌🥳\nThời gian: ${timeTaken}`;
+    const timeTaken = `${p}phút ${s}giây`;
+    modalTitle.innerHTML = `Bạn đã chiến thắng! 🙌🥳</br>Thời gian: </br>${timeTaken}`;
     modal.classList.add('modal--open');
 }
 
 function lose() {
     isLose = true;
     modalTitle.innerHTML = 'Thất bại!!! 😢😩';
+    takeGift.remove();
     modal.classList.add('modal--open');
     refresh();
 }
@@ -151,9 +156,7 @@ function handleClick(e) {
             counter -= 1;
             availableMobile.innerHTML=counter;
             available.innerHTML = counter;
-            if (minutes === 0 & seconds === 0){
-                lose();
-            }
+
             if (counter === 0) {
                 lose();
             }
@@ -213,7 +216,8 @@ document.querySelector('#play-again').addEventListener('click', function () {
     modal.classList.remove('modal--open');
     isPaused = false;
     isLose = false;
-    counter = CARDS.length + 10;
+    counter = CARDS.length + 24;
+    refresh();
     drawCards();
 });
 document.querySelector('#take-gift').addEventListener('click', function () {
