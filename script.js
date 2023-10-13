@@ -41,7 +41,7 @@ const modalInfoUser = document.querySelector('#modalInfoUser');
 const modalSuccess = document.querySelector('#modalSuccess');
 let currentCards = [...CARDS, ...CARDS];
 let isPaused = false;
-let counter = CARDS.length +54;
+let counter = CARDS.length -5;
 let isLose = false;
 let timer;
 let seconds = 1;
@@ -267,7 +267,7 @@ $("#dataForm").submit(function(e) {
     var CodeWin=checkTime(minutes,seconds);
     checkTime(minutes,seconds)
     const info= `${name}' ${phone}s`;
-    success.innerHTML = `Bạn đã trúng : ${CodeWin.description} Đây là mã của bạn ${CodeWin.code}`;
+    success.innerHTML = `Bạn đã trúng : ${CodeWin.description} </br> Đây là mã của bạn ${CodeWin.code}`;
     modal.classList.remove('modal--open');
     modalSuccess.classList.add('modal--open');
   });
