@@ -17,17 +17,23 @@
   font-family: "Raleway", serif;
   margin: 0;
   padding: 0;
+  
+
 }
 
 body {
-  background: #ffffff url('background.png'); /* Background pattern from Subtle Patterns */
+  background: #ffffff url('background.png');
   background-repeat: no-repeat;
-    background-size: cover;
-    font-family: 'Coda', cursive;
-    font-size: 1em; /*16px*/
+  background-size: cover;
+  font-family: 'Coda', cursive;
+  font-size: 1em; /*16px*/
   padding: 1rem;
+  width: 100%;
+  height: 100%;
 }
-
+.container{
+  max-width: 1920px;
+}
 .content {
   margin: 0 auto;
   max-width: 85rem;
@@ -35,44 +41,66 @@ body {
 }
 
 .title {
+ width: 100%;
+ text-align: center;
   color: var(--yellow);
-  font-family: "Cormorant Infant", serif;
+  font-family: 'Courier New', Courier, monospace;
   font-size: 3rem;
   font-weight: 600;
   line-height: 1.2;
 }
+.timeDown{
+  display: flex;
+  border: 2px solid #262626;
+  background: rgba(69, 69, 69, 0.2);
+  border-radius: 10px;
+  width: 100%;
+  justify-content: space-around;
+}
 .title-time{
   color: var(--bridal-heath);
+  font-size: 17px;
+  padding: 15px;
+  margin: 0;
+}
+#timer{
+  font-size: 22px;
+  border-radius: 20%;
+  font-family: 'Courier New', Courier, monospace;
 }
 .header {
   align-items: center;
   display: flex;
   justify-content: space-between;
   margin-bottom: 1rem;
+ 
 }
 
 .movement {
-  align-items: center;
+  margin-top: 30px;  
   display: flex;
-  flex-direction: column;
+  width: 100%;
+  border: 2px solid #262626;
+  background: rgba(69, 69, 69, 0.2);
+  border-radius: 10px;
+  justify-content: center;
 }
 
 .subtitle {
-  color: var(--yellow);
-  font-size: 1rem;
-  font-weight: 300;
-  line-height: 1.2;
-  margin-bottom: 0.25rem;
+ 
+  color: var(--bridal-heath);
+  font-size: 16px;
+  padding: 19px 10px;
+  margin: 0;
 }
 
 .available {
-  border-radius: 0.25rem;
-  box-shadow: inset 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.2),
-    inset -0.25rem -0.25rem 0.25rem rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  
   color: var(--white);
   font-size: 2rem;
   font-weight: 600;
-  padding: 0.5rem 1rem;
+  padding: 5px 20px;
 }
 
 .card-container {
@@ -230,4 +258,25 @@ input{
 .back__img {
   width: 3rem;
 }
+}
+
+.main-content{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+}
+.content-left{
+  width: 80%;
+  padding: 20px;
+  border: 2px solid #262626;
+  background: rgba(46, 45, 45, 0.1);
+  border-radius: 10px;
+}
+.content-right{
+  width: 18%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
