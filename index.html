@@ -55,16 +55,23 @@
       </div>
     </div>
     <div class="modal" id="modalInfoUser">
-      <div class="modal-container">
-        <div class="close-btn">
-          <button
-            type="button"
-            class="close"
-            style="margin-right: 10px; border: none"
-            id="btn-close"
-          >
-            &times;
-          </button>
+        <div class="modal-container">
+            <div class="close-btn">
+                <button type="button" class="close" id="btn-close-user-info">
+                    &times;
+                </button>
+            </div>
+            <h5 class="titleUserForm">Nhập thông tin</h5>
+            <form id="dataForm">
+                <label for="name">Họ và tên:</label>
+                <input type="text" class="form-control" id="name" placeholder="Nhập họ và tên" />
+                <label for="phone">Số điện thoại:</label>
+                <input type="tel" class="form-control" id="phone" placeholder="Nhập số điện thoại" pattern="[0-9]{10}"
+                    title="Hãy nhập số điện thoại 10 số hợp lệ (e.g., 1234567890)" />
+                <button type="submit" class="btn btn-primary" style="float: right; margin: 10px 0">
+                    Nhận mã
+                </button>
+            </form>
         </div>
         <h5 class="titleUserForm">Nhập thông tin</h5>
         <form id="dataForm">

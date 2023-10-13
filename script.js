@@ -43,12 +43,14 @@ let isPaused = false;
 let counter = CARDS.length -5;
 let isLose = false;
 let timer;
-let seconds = 0;
-let minutes = 0;
+let seconds = 1;
+let minutes = 3;
 
 
 function startTimer() {
+    
     if (!timer) {
+        setTimeout(1000)
         timer = setInterval(updateTimer, 1000);
     }
 }
@@ -60,14 +62,19 @@ function stopTimer() {
     }
 }
 
+
 function updateTimer() {
-    seconds++;
-    if (seconds === 60) {
-        seconds = 0;
-        minutes++;
+    if (minutes > 0 || seconds > 0) {
+        if (seconds === 0) {
+            seconds = 59;
+            minutes--;
+        } else {
+            seconds--;
+        }
+
+        const timerDisplay = document.getElementById("timer");
+        timerDisplay.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
     }
-    const timerDisplay = document.getElementById("timer");
-    timerDisplay.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
 }
 function refresh(){
     stopTimer();
@@ -207,11 +214,20 @@ document.querySelector('#take-gift').addEventListener('click', function () {
     refresh();
     drawCards();
 });
-document.querySelector('#btn-close').addEventListener('click',function (){
+document.querySelector('#btn-close-user-info').addEventListener('click',function (){
     modalInfoUser.classList.remove('modal--open');
     isPaused = false;
     isLose = false;
     refresh(); 
+    drawCards();
+})
+document.querySelector('#btn-close-succsess-modal').addEventListener('click',function (){
+    modalSuccess.classList.remove('modal--open');
+    modalInfoUser.classList.remove('modal--open');
+    isPaused = false;
+    isLose = false;
+    refresh();
+    isPaused=true;
     drawCards();
 })
 function checkTime(minutes,seconds){
@@ -283,8 +299,8 @@ $("#dataForm").submit(function(e) {
     var phone = $("#phone").val();
     var CodeWin=checkTime(minutes,seconds);
     checkTime(minutes,seconds)
-    const info= `${name} ${phone}`;
-    success.innerHTML = `alo : ${info} </br>Đây là mã của bạn: ${CodeWin.code} <button id="copyButton">Copy</button>`;
+    const info= `${name}' ${phone}s`;
+    success.innerHTML = `Bạn đã trúng : ${CodeWin.description} Đây là mã của bạn ${CodeWin.code}`;
     modal.classList.remove('modal--open');
     modalSuccess.classList.add('modal--open');
   });
