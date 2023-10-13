@@ -250,47 +250,9 @@ function checkTime(minutes,seconds){
     return CodeWin;
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    var copyButton = document.getElementById('copyButton');
-    var codeContainer = document.getElementById('codeContainer');
-    var info = document.getElementById('info');
 
-    copyButton.addEventListener('click', function() {
-        var textToCopy = codeContainer.innerText;
 
-        // Tạo một textarea ẩn để chứa nội dung cần sao chép
-        var textArea = document.createElement("textarea");
-        textArea.value = textToCopy;
-        document.body.appendChild(textArea);
 
-        // Lựa chọn và sao chép nội dung vào clipboard
-        textArea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textArea);
-
-        // Hiển thị thông báo hoặc thay đổi trạng thái nút sau khi sao chép thành công
-        copyButton.innerText = "Copied!";
-        setTimeout(function() {
-            copyButton.innerText = "Copy";
-        }, 1500);
-    });
-
-    $("#dataForm").submit(function(e) {
-        e.preventDefault();
-        var name = $("#name").val();
-        var phone = $("#phone").val();
-        var CodeWin = checkTime(minutes, seconds);
-        const infoText = `${name} ${phone}`;
-        info.innerText = infoText;
-
-        // Hiển thị mã và nút "Copy"
-        codeContainer.innerText = CodeWin.code;
-        copyButton.style.display = "block";
-
-        modal.classList.remove('modal--open');
-        modalSuccess.classList.add('modal--open');
-    });
-});
 
 $("#dataForm").submit(function(e) {
     e.preventDefault(); // ngăn chặn việc tải lại trang
@@ -300,7 +262,8 @@ $("#dataForm").submit(function(e) {
     var CodeWin=checkTime(minutes,seconds);
     checkTime(minutes,seconds)
     const info= `${name}' ${phone}s`;
-    success.innerHTML = `Bạn đã trúng : ${CodeWin.description} Đây là mã của bạn ${CodeWin.code}`;
+    success.innerHTML = `Bạn đã trúng : ${CodeWin.description} Mã của bạn:`;
+    coupon.innerHTML = `  ${CodeWin.code}`;
     modal.classList.remove('modal--open');
     modalSuccess.classList.add('modal--open');
   });

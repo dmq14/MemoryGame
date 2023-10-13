@@ -69,13 +69,33 @@
             <div class="close-btn">
                 <button type="button" class="close" id="btn-close-succsess-modal">&times;</button>
             </div>
-            <h4 class="modal-title">Cảm ơn bạn đã tham gia chương trình</h4>
-            <h4 class="modal-title" id="success">Đây là mã của bạn 12354</h4>
+            <h4 class="modal-title" style="font-weight: bolder;">Cảm ơn bạn đã tham gia chương trình</h4>
+            <h4 class="modal-title" id="success"></h4>
+            <h4 class="modal-title" id="coupon"></h4>
+            <h4 class="modal-title" id="copiedd"></h4>
+            <button id="copyButton" onclick="copyCouponCode()">Copy</button>
         </div>
-        <button id="copyButton">Copy</button>
     </div>
     </div>
     <script src="script.js"></script>
 </body>
 
 </html>
+<script>
+  function copyCouponCode() {
+      var couponElement = document.getElementById("coupon");
+
+      var tempInput = document.createElement("input");
+      tempInput.value = couponElement.innerText;
+
+      document.body.appendChild(tempInput);
+
+      tempInput.select();
+
+      document.execCommand("copy");
+
+      document.body.removeChild(tempInput);
+
+      copiedd.innerHTML = ` đã coppy`;
+  }
+</script>
