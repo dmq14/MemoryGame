@@ -20,7 +20,7 @@
 }
 
 body {
-  background: #ffffff url('https://images7.alphacoders.com/782/782527.jpg'); /* Background pattern from Subtle Patterns */
+  background: #ffffff url('background.png'); /* Background pattern from Subtle Patterns */
   background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Coda', cursive;
