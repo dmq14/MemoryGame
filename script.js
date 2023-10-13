@@ -78,8 +78,8 @@ function updateTimer() {
 }
 function refresh(){
     stopTimer();
-    minutes=0;
-    seconds=0;
+    minutes=3;
+    seconds=1;
     updateTimer();
     counter=CARDS.length + 94;
 }
