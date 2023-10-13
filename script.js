@@ -34,6 +34,7 @@ const CARDS = [
 ];
 const cardContainer = document.querySelector('.card-container');
 const available = document.querySelector('#available');
+const availableMobile = document.querySelector('#available-mobile');
 const modalTitle = document.querySelector('#modal-title');
 const modal = document.querySelector('#modal');
 const modalInfoUser = document.querySelector('#modalInfoUser');
@@ -73,7 +74,9 @@ function updateTimer() {
         }
 
         const timerDisplay = document.getElementById("timer");
+        const timerDisplayMobile = document.getElementById("timer-mobile");
         timerDisplay.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+        timerDisplayMobile.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
     }
 }
 function refresh(){
@@ -146,6 +149,7 @@ function handleClick(e) {
             }
             console.log('counter', counter);
             counter -= 1;
+            availableMobile.innerHTML=counter;
             available.innerHTML = counter;
             if (minutes === 0 & seconds === 0){
                 lose();
@@ -169,6 +173,7 @@ function handleClick(e) {
 
 function drawCards() {
     cardContainer.innerHTML = '';
+    availableMobile.innerHTML=counter;
     available.innerHTML = counter;
 
     shuffle(currentCards).forEach((el) => {
@@ -254,11 +259,6 @@ function checkTime(minutes,seconds){
     }
     return CodeWin;
 }
-
-
-
-
-
 $("#dataForm").submit(function(e) {
     e.preventDefault(); // ngăn chặn việc tải lại trang
     // Get values from the input fields
@@ -267,10 +267,10 @@ $("#dataForm").submit(function(e) {
     var CodeWin=checkTime(minutes,seconds);
     checkTime(minutes,seconds)
     const info= `${name}' ${phone}s`;
-    success.innerHTML = `Bạn đã trúng : ${CodeWin.description}</br> Mã của bạn:`;
-    coupon.innerHTML = `  ${CodeWin.code}`;
+    success.innerHTML = `Bạn đã trúng : ${CodeWin.description} Đây là mã của bạn ${CodeWin.code}`;
     modal.classList.remove('modal--open');
     modalSuccess.classList.add('modal--open');
   });
 drawCards();
+
 
