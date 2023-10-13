@@ -250,11 +250,11 @@ function checkTime(minutes,seconds){
         'description':''
     }
        
-    if(minutes==0&seconds<=30){
+    if(minutes==2&seconds>=30){
         
          CodeWin.code='SALE-KL12'
          CodeWin.description='Mã giảm giá 300K'
-    }else if(minutes==0&seconds<=60){
+    }else if((minutes==2&seconds<=30) || (minutes==1&seconds>=59)){
         CodeWin.code= 'SALE-GH78';
         CodeWin.description='Mã giảm giá 200K'
     }else{
