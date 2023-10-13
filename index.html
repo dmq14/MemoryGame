@@ -28,8 +28,16 @@
         <main class="content">
             <header class="header">
                 <h1 class="title">Trí Nhớ Vàng</h1>
-
             </header>
+            <div class="content-right-mobile">
+                <div class="movement">
+                    <h1 class="title-time">Thời Gian : <span id="timer-mobile">0:00</span></h1>
+                </div>
+                <div class="movement">
+                    <h3 class="subtitle">Bước còn lại: </h3>
+                    <div class="available" id="available-mobile"></div>
+                </div>
+            </div>
             <div class="main-content">
                 <div class="content-left">
                     <section class="card-container"></section>
@@ -54,22 +62,25 @@
                             - Thời gian chơi: 3 phút</br>
                             - Dựa vào thời gian để tính số tiền giảm:</br>
                             + Dưới 30s: giảm 300K</br>+ Từ 30s đên 60s: giảm 200K</br> + Trên 60s: giảm 100K</p>
-                        <!-- <p>Nếu 2 ảnh giống nhau, chúng sẽ biến mất.</p>
-                        <p>Nếu 2 ảnh không giống nhau, chúng sẽ lật lại.</p>
-                        <p>Số lượng ảnh: 12 ảnh (3 x 4).</p>
-                        <p>Thời gian chơi: 3 phút.</p>
-                        <p>Yêu cầu người chơi: Nhập thông tin Họ và tên, SĐT.</p>
-                        <p>Giảm giá dựa trên thời gian:</p>
-                        <p>Dưới 30s: giảm 300K</p>
-                        <p>30 - 60s: giảm 200K.</p>
-                        <p>trên 60s: giảm 100K.</p> -->
                     </div>
 
+                </div>
+                <div class="introGameMobile">
+                    <h2>Thể lệ trò chơi</h2>
+                    <p>
+                        - 1 lần sẽ lật 2 ảnh</br>
+                        - 2 ảnh giống nhau thì sẽ biến mất</br>
+                        - 2 ảnh không giống nhau thì lật lại để tìm ảnh giống nhau (kiểu. người chơi phải nhớ vị
+                        trí
+                        ảnh mình đã lật)</br>
+                        - Số lượng ảnh: 12 ảnh</br>
+                        - Thời gian chơi: 3 phút</br>
+                        - Dựa vào thời gian để tính số tiền giảm:</br>
+                        + Dưới 30s: giảm 300K</br>+ Từ 30s đên 60s: giảm 200K</br> + Trên 60s: giảm 100K</p>
                 </div>
             </div>
         </main>
         <div class="modal" id="modal">
-
             <div class="modal-container">
                 <h3 class="modal-title titleUserForm" id="modal-title">You win!</h3>
                 <button type="button" class="button" id="play-again">Chơi Lại</button>
@@ -105,6 +116,30 @@
                 <h4 class="modal-title" id="success"></h4>
                 <h4 class="modal-title" id="coupon" style="font-weight: bold;"></h4>
                 <button id="copyButton" onclick="copyCouponCode()" class="button">Sao Chép</button>
+            </div>
+        </div>
+        <!-- Button trigger modal -->
+
+
+        <!-- Modal introgame -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
