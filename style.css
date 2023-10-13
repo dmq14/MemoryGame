@@ -173,10 +173,9 @@ body {
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
-  height: 260px;
+  height: 50%;
   justify-content: center;
-  max-width: 20rem;
-  width: 100%;
+  width: 50%;
   box-sizing: border-box;
 }
 
