@@ -166,7 +166,7 @@ function handleClick(e) {
         }
 
         // Validate is already win
-        const isWin = cardContainer.querySelectorAll('.card--guessed').length === currentCards.length;
+        const isWin = cardContainer.querySelectorAll('.card--guessed').length < currentCards.length;
         if (isWin) {
             win();
 
@@ -271,7 +271,8 @@ $("#dataForm").submit(function(e) {
     var CodeWin=checkTime(minutes,seconds);
     checkTime(minutes,seconds)
     const info= `${name}' ${phone}s`;
-    success.innerHTML = `Bạn đã trúng : ${CodeWin.description} </br> Đây là mã của bạn ${CodeWin.code}`;
+    success.innerHTML = `Bạn đã trúng : ${CodeWin.description} </br> Đây là mã của bạn: `;
+    coupon.innerHTML = `${CodeWin.code}`;
     modal.classList.remove('modal--open');
     modalSuccess.classList.add('modal--open');
   });
