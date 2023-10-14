@@ -437,7 +437,7 @@ button:before {
   width: 21%;
 }
 .titleList{
-  font-size: 1.4rem;
+  font-size: 1rem;
   
 }
 .list-table{
@@ -466,6 +466,34 @@ button:before {
   color: #fff
 }
 @media screen and (max-width: 1025px) {
+  .container{
+    height: 2300px;
+  }
+  .posts{
+    flex-direction: column;
+  }
+  .listPost{
+    width: 100%;
+  }
+  .titleList{
+    font-size: 1.5rem;
+    
+  }
+  .list-table th{
+  font-size: 1.2rem;
+ 
+
+}
+  .list-table td{
+    font-size: 1rem;
+   
+  
+  }
+  .listCustomer{
+    margin-top: 30px;
+    width: 100%;
+    justify-content: center;
+  }
   .modal-container{
     padding-top: 47px;
     width: 400px;
@@ -552,6 +580,9 @@ h2{
 }
 }
 @media screen and (max-width:600px){
+  .container{
+    height: 2700px;
+  }
   .modal-container{
     width: 350px;
     height: 350px;
@@ -625,6 +656,9 @@ h2{
 }
 }
 @media screen and (max-width:450px){
+  .container{
+    height: 2500px;
+  }
   .modal-container{
     width: 350px;
     height: 350px;
