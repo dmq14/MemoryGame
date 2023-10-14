@@ -433,7 +433,32 @@ button:before {
   flex-direction: column;
   justify-content: space-between;
 }
+.listCustomer{
+  width: 21%;
+}
+.titleList{
+  font-size: 1.4rem;
+  
+}
+.list-table{
+  border-collapse: collapse;
+  width: 100%;
+}
+.list-table th td{
+  border: 1px solid rgb(167, 159, 159);
+  padding: 8px;
+  text-align: left;
+}
+.list-table th{
+  font-size: 0.7rem;
+  border: 1px solid rgb(255, 255, 255);
 
+}
+.list-table td{
+  font-size: 0.6rem;
+  border: 1px solid rgb(255, 255, 255);
+
+}
 
 .btn-c{
   background-color: #461c6d;
