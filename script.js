@@ -48,6 +48,8 @@ let isLose = false;
 let timer;
 let seconds = 1;
 let minutes = 3;
+let secondsDone;
+let minutesDone;
 
 
 function startTimer() {
@@ -111,9 +113,11 @@ function shuffle(array) {
 
 function win() {
     isPaused = true;
-    stopTimer(); 
-    let p = 3 - minutes;
+    stopTimer();
+    let p = 2 - minutes;
     let s = 60 - seconds;
+    minutesDone = p;
+    secondsDone = s;
     const timeTaken = `${p}phút ${s}giây`;
     modalTitle.innerHTML = `Bạn đã chiến thắng! 🙌🥳</br>Thời gian: </br>${timeTaken}`;
     modal.classList.add('modal--open');
@@ -166,7 +170,7 @@ function handleClick(e) {
         }
 
         // Validate is already win
-        const isWin = cardContainer.querySelectorAll('.card--guessed').length < currentCards.length;
+        const isWin = cardContainer.querySelectorAll('.card--guessed').length === currentCards.length;
         if (isWin) {
             win();
 
@@ -244,17 +248,18 @@ document.querySelector('#btn-close-succsess-modal').addEventListener('click',fun
     isPaused=true;
     drawCards();
 })
-function checkTime(minutes,seconds){
+function checkTime(){
     var CodeWin={
         'code':'',
         'description':''
     }
-       
-    if(minutes==2&seconds>=30){
+    console.log(minutesDone);
+    console.log(secondsDone);
+    if(minutesDone==0&&secondsDone<=30){
         
          CodeWin.code='SALE-KL12'
          CodeWin.description='Mã giảm giá 300K'
-    }else if((minutes==2&seconds<=30) || (minutes==1&seconds>=59)){
+    }else if((minutesDone == 0 && secondsDone<= 59 && secondsDone >30) ){
         CodeWin.code= 'SALE-GH78';
         CodeWin.description='Mã giảm giá 200K'
     }else{
