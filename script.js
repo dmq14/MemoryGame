@@ -289,3 +289,17 @@ window.addEventListener("load", function () {
   });
 
 
+  const content = document.querySelector('.contentPost');
+const readMoreButton = document.querySelector('#btn-viewMore');
+
+readMoreButton.addEventListener('click', function () {
+  if (content.style.maxHeight === '400px') {
+    content.style.maxHeight = '700px';
+    content.style.overflow = 'auto';
+    readMoreButton.textContent = 'Thu gọn';
+  } else {
+    content.style.maxHeight = '400px';
+    content.style.overflow = 'hidden';
+    readMoreButton.textContent = 'Xem thêm';
+  }
+});
