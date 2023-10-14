@@ -595,6 +595,9 @@ h2{
 }
 }
 @media screen and (max-width:600px){
+  .notification{
+    display: none!important;
+  }
   #content-left{
     order: 2;
    
@@ -682,6 +685,9 @@ h2{
 }
 }
 @media screen and (max-width:450px){
+  .notification{
+    display: none!important;
+  }
   .container{
     height: 2500px;
   }
