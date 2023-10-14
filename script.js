@@ -137,7 +137,53 @@ function handleClick(e) {
         !isLose &&
         !target.classList.contains('card--guessed') &&
         !target.classList.contains('card--picked') 
+        
     ) {
+        notification.innerHTML = `        <div
+        class="alert fade alert-simple alert-success alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show"
+      >
+        <button
+          type="button"
+          class="close font__size-18"
+          data-dismiss="alert"
+        >
+          <span aria-hidden="true"
+            ><a>
+              <i class="fa fa-times greencross"></i> </a
+          ></span>
+          <span class="sr-only">Close</span>
+        </button>
+        <i class="start-icon far fa-check-circle faa-tada animated"></i>
+        <strong class="font__weight-semibold">Thời gian bắt đầu!</strong> </br> Bạn có 3 phút để hoàn thành!
+      </div>
+    </div>`;
+    setTimeout(() => {
+        notification.style.opacity = 0;
+        notification.classList.add('hidden');
+    }, 3000);
+    notificationMobile.innerHTML = `        <div
+    class="alert fade alert-simple alert-success alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show"
+  >
+    <button
+      type="button"
+      class="close font__size-18"
+      data-dismiss="alert"
+    >
+      <span aria-hidden="true"
+        ><a>
+          <i class="fa fa-times greencross"></i> </a
+      ></span>
+      <span class="sr-only">Close</span>
+    </button>
+    <i class="start-icon far fa-check-circle faa-tada animated"></i>
+    <strong class="font__weight-semibold">Thời gian bắt đầu!</strong> </br> Bạn có 3 phút để hoàn thành!
+  </div>
+</div>`;
+setTimeout(() => {
+    notificationMobile.style.opacity = 0;
+    notificationMobile.classList.add('hidden');
+}, 3000);
+        console.log();
         startTimer()
         isPaused = true;
         const picked = cardContainer.querySelector('.card--picked');
