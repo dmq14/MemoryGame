@@ -265,7 +265,6 @@ function checkTime(minutes,seconds){
 }
 $("#dataForm").submit(function(e) {
     e.preventDefault(); // ngăn chặn việc tải lại trang
-    // Get values from the input fields
     var name = $("#name").val();
     var phone = $("#phone").val();
     var CodeWin=checkTime(minutes,seconds);
@@ -277,5 +276,16 @@ $("#dataForm").submit(function(e) {
     modalSuccess.classList.add('modal--open');
   });
 drawCards();
+
+//Xét chiều cao cho 2 content-left và right bằng nhau
+window.addEventListener("load", function () {
+    // Lấy chiều cao của content-left
+    const contentLeft = document.querySelector(".content-left");
+    const contentLeftHeight = contentLeft.offsetHeight;
+  
+    // Gán chiều cao của content-left cho content-right
+    const contentRight = document.querySelector(".content-right");
+    contentRight.style.height = contentLeftHeight + "px";
+  });
 
 

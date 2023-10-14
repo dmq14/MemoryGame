@@ -70,6 +70,7 @@ body {
   border-radius: 10px;
   width: 100%;
   justify-content: space-around;
+
 }
 .title-time{
   color: var(--bridal-heath);
@@ -98,6 +99,7 @@ body {
   background: rgba(69, 69, 69, 0.2);
   border-radius: 10px;
   justify-content: center;
+ 
 }
 .dataForm{
   width: 60%;
@@ -349,6 +351,51 @@ button:before {
   height: 100%;
   justify-content: space-between;
 }
+.posts{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.listPost{
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px 20px !important;;
+}
+.titlePost{
+  color: #f5f5f5;
+  text-align: center;
+}
+.contentPost{
+  color: #f5f5f5;
+  text-align: justify;
+  max-height: 500px;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in;
+  padding: 5px;
+}
+.viewMore{
+  position: absolute;
+}
+#btn-viewMore{
+  background: rgba(84, 84, 84, 0.2);
+  color: #fff;
+  border: none;
+  padding: 7px;
+  cursor: pointer;
+
+}
+.listCustomer{
+  height: 500px!important;
+  padding: 10px;
+  border: 2px solid #262626;
+  background: rgba(69, 69, 69, 0.2);
+  border-radius: 10px;
+  color: #f5f5f5;
+}
 .content-left{
   width: 78%;
   padding: 20px;
@@ -362,6 +409,7 @@ button:before {
   padding-top: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 
@@ -403,7 +451,7 @@ button:before {
  
 @media screen and (max-width: 769px) {
   .modal-container{
-    padding-top: 40px;
+    padding-top: 20px;
     width: 320px;
     height: 320px;
   }
@@ -431,10 +479,10 @@ button:before {
 }
 .subtitle{
   font-size: 9px;
-    padding: 22px 0px;
+  padding: 20px 0px;
 }
 .available{
-  padding: 5px 15px;
+  padding: 5px 10px;
   font-size: 25px;
 }
 .card-container{
@@ -451,6 +499,9 @@ h2{
 }
 .instructions{
   font-size: 10px;
+}
+.content-right{
+  justify-content: center;
 }
 }
 @media screen and (max-width:600px){
