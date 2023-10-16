@@ -34,11 +34,8 @@ body {
 .tilte-header{
   margin-bottom: 15px;
   padding: 10px;
-    border: 2px solid #262626;
-    background: rgba(69, 69, 69, 0.2);
-    border-radius: 10px;
-    color: #f5f5f5;
-   
+  display: flex;
+  justify-content: center;
 }
 .content-right-mobile{
   display: none;
@@ -58,13 +55,17 @@ body {
 
 
 .title {
- width: 100%;
+ width: 40%;
+ height: 70px;
  text-align: center;
   color: var(--yellow);
   font-family: 'Courier New', Courier, monospace;
   font-size: 3rem;
   font-weight: 600;
   line-height: 1.2;
+  border: 2px solid #262626;
+  background: rgba(69, 69, 69, 0.2);
+  border-radius: 10px;
 }
 .timeDown{
   display: flex;
@@ -98,6 +99,7 @@ body {
 }
 .lable-list-win{
   font-weight: bold;
+
 }
 .menuBar{
   width: 80%;
@@ -107,16 +109,18 @@ body {
   cursor: pointer;
 }
 .tabMenu{
-  width: 15% !important;
+  width: 18% !important;
   margin:10px;
   display: block;
   text-align: center;
   background-color: #262626  !important;
-
+  transition: 0.3s;
 }
 .titleHeader{
-  font-size: 20px!important;
+  font-size: 18px!important;
   color: #f5f5f5!important;
+  text-decoration: none;
+}.titleHeader:hover{
   text-decoration: none;
 }
 .movement {
@@ -143,6 +147,7 @@ body {
     border: 2px solid #262626;
     background: rgba(69, 69, 69, 0.2);
   margin-bottom: 20px;
+  border-radius: 10px;
 }
 .slide-img{
   text-align: center ;width: 100%; height: auto; 
@@ -401,6 +406,7 @@ button:before {
   flex-direction: column;
   justify-content: center;
   padding: 15px 20px !important;
+  border-radius: 10px;
 }
 .titlePost{
   color: #f5f5f5;
@@ -448,7 +454,7 @@ button:before {
 }
 .listCustomer{
   margin-top: 15px;
-  height: 700px!important;
+  height: 750px!important;
   padding: 10px;
   border: 2px solid #262626;
   background: rgba(69, 69, 69, 0.2);
@@ -481,7 +487,7 @@ button:before {
   width: 100%;
 }
 .tableUserResult{
-  height: 500px; overflow: auto;overflow-x: hidden;
+  height: 620px; overflow: auto;overflow-x: hidden;
 }
 .list-table th{
   font-size: 0.7rem;
@@ -501,6 +507,7 @@ select:focus {
   outline: none; }
 
 .tabs {
+
   display: block;
   display: -webkit-flex;
   display: -moz-flex;
@@ -515,7 +522,7 @@ select:focus {
     color: #efedef;
     cursor: pointer;
     display: block;
-    font-size: 1.4em;
+    font-size: 1.2em;
     font-weight: bold;
     line-height: 1em;
     padding: 2rem 0;
@@ -583,6 +590,12 @@ table.dataTable thead .sorting_desc_disabled:before {
   bottom: .5em;
 }
 @media screen and (max-width: 1025px) {
+  .title{
+    width: 50%;
+  }
+  .lable-list-win{
+    font-size: 20px!important;
+  }
   #content-left{
     order: 2;
     margin-top: 15px;
@@ -601,10 +614,10 @@ table.dataTable thead .sorting_desc_disabled:before {
     font-size: 16px!important;
   }
   .container{
-    height: 2800px;
+    height: 2900px;
   }
   .tableUserResult{
-    height: 600px; overflow: auto;overflow-x: hidden;
+    height: 700px; overflow: auto;overflow-x: hidden;
   }
   .posts{
     flex-direction: column;
@@ -624,6 +637,7 @@ table.dataTable thead .sorting_desc_disabled:before {
     font-size: 1rem;
   }
   .listCustomer{
+    height: 800px!important;
     margin-top: 15px;
     width: 100%;
     justify-content: center;
@@ -661,8 +675,14 @@ table.dataTable thead .sorting_desc_disabled:before {
   }
  
 @media screen and (max-width: 769px) {
+  .title{
+    width: 70%;
+  }
+  .lable-list-win{
+    font-size: 17px!important;
+  }
   .container{
-    height: 2800px;
+    height: 3000px;
   }
   .tabMenu{
     width: 24%!important;
@@ -674,8 +694,11 @@ table.dataTable thead .sorting_desc_disabled:before {
   #content-right{
     order: 1;
   }
+  .listCustomer{
+    height: 900px!important;
+  }
   .tableUserResult{
-    height: 600px; overflow: auto;overflow-x: hidden;
+    height: 770px; overflow: auto;overflow-x: hidden;
   }
   .titleHeader{
     font-size: 11px!important;
@@ -737,7 +760,14 @@ h2{
 }
 }
 @media screen and (max-width:600px){
-  
+  .title{
+    width: 80%;
+    font-size: 2.9rem;
+  }
+  .lable-list-win{
+    font-size: 15px!important;
+    padding:10px 30px!important;
+  }
   .notification{
     display: none!important;
   }
@@ -749,9 +779,13 @@ h2{
     order: 1;
    
   }
-  .tableUserResult{
-    height: 600px; overflow: auto;overflow-x: hidden;
+  .listCustomer{
+    height: 850px!important;
   }
+  .tableUserResult{
+    height: 800px; overflow: auto;overflow-x: hidden;
+  }
+  
   .menuBar{
     width: 100%;
     justify-content: space-between;
@@ -772,7 +806,7 @@ h2{
     margin-top: 20px;
   }
   .container{
-    height: 3000px;
+    height: 3200px;
   }
   .modal-container{
     width: 350px;
@@ -847,6 +881,10 @@ h2{
 }
 }
 @media screen and (max-width:450px){
+  .lable-list-win{
+    font-size: 13px!important;
+    padding:10px 30px!important;
+  }
   .notification{
     display: none!important;
   }
@@ -869,10 +907,10 @@ h2{
   height: 30px!important;
 }
 .tableUserResult{
-  height: 670px; overflow: auto;overflow-x: hidden;
+  height: 890px; overflow: auto;overflow-x: hidden;
 }
 .listCustomer{
-  height: 800px!important;
+  height: 930px!important;
 }
 .tabMenu{
   width: 24%!important;
