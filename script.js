@@ -354,5 +354,6 @@ readMoreButton.addEventListener('click', function () {
 
 $(document).ready(function () {
     $('#dtBasicExample').DataTable();
+    $('#dtBasicExample2').DataTable();
     $('.dataTables_length').addClass('bs-select');
   });
