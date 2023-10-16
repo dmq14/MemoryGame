@@ -17,7 +17,7 @@
   font-family: "Raleway", serif;
   margin: 0;
   padding: 0;
-  
+  scroll-behavior:smooth;
 
 }
 
@@ -47,7 +47,7 @@ body {
 }
 .container{
   max-width: 1920px;
-  height: 1700px;
+  height: 2500px;
 }
 .content {
   margin: 0 auto;
@@ -87,11 +87,13 @@ body {
 }
 .header {
   align-items: center;
-  display: flex;
   justify-content: center;
   margin-bottom: 1rem;
+  height: 100px;
   display: flex;
-  flex-direction: column;
+  width: 100%;
+  /* position: fixed; */
+  z-index:30;
 }
 .menuBar{
   width: 80%;
@@ -101,10 +103,12 @@ body {
   cursor: pointer;
 }
 .tabMenu{
-  width: 20%;
+  width: 20% !important;
   margin:10px;
   display: block;
   text-align: center;
+  background-color: #262626  !important;
+
 }
 .titleHeader{
  
@@ -115,7 +119,7 @@ body {
   display: flex;
   width: 100%;
   border: 2px solid #262626;
-  background: rgba(69, 69, 69, 0.2);
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   justify-content: center;
  
@@ -130,7 +134,9 @@ body {
   padding: 20px 5px;
   margin: 0;
 }
-
+.slide-img{
+  text-align: center ;width: 100%; height: auto; 
+}
 .available {
   border-radius: 0.3rem;
   
@@ -454,7 +460,6 @@ button:before {
   justify-content: space-between;
 }
 .listCustomer{
-  width: 21%;
   display: flex;
 }
 .titleList{
