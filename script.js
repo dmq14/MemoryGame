@@ -154,35 +154,14 @@ function handleClick(e) {
           <span class="sr-only">Close</span>
         </button>
         <i class="start-icon far fa-check-circle faa-tada animated"></i>
-        <strong class="font__weight-semibold">Thời gian bắt đầu!</strong> </br> Bạn có 3 phút để hoàn thành!
+        <strong class="font__weight-semibold">Thời gian bắt đầu!</strong>  Bạn có 3 phút để hoàn thành!
       </div>
     </div>`;
     setTimeout(() => {
         notification.style.opacity = 0;
         notification.classList.add('hidden');
     }, 3000);
-    notificationMobile.innerHTML = `        <div
-    class="alert fade alert-simple alert-success alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show"
-  >
-    <button
-      type="button"
-      class="close font__size-18"
-      data-dismiss="alert"
-    >
-      <span aria-hidden="true"
-        ><a>
-          <i class="fa fa-times greencross"></i> </a
-      ></span>
-      <span class="sr-only">Close</span>
-    </button>
-    <i class="start-icon far fa-check-circle faa-tada animated"></i>
-    <strong class="font__weight-semibold">Thời gian bắt đầu!</strong> </br> Bạn có 3 phút để hoàn thành!
-  </div>
-</div>`;
-setTimeout(() => {
-    notificationMobile.style.opacity = 0;
-    notificationMobile.classList.add('hidden');
-}, 3000);
+    
         console.log();
         startTimer()
         isPaused = true;
@@ -204,8 +183,8 @@ setTimeout(() => {
             }
             console.log('counter', counter);
             counter -= 1;
-            availableMobile.innerHTML=counter;
-            available.innerHTML = counter;
+            availableMobile.innerHTML=`Số bước còn lại: ${counter}`;
+            available.innerHTML = `Số bước còn lại: ${counter}`;
 
             if (counter === 0) {
                 lose();
@@ -226,8 +205,8 @@ setTimeout(() => {
 
 function drawCards() {
     cardContainer.innerHTML = '';
-    availableMobile.innerHTML=counter;
-    available.innerHTML = counter;
+    availableMobile.innerHTML=`Số bước của bạn: 30`;
+    available.innerHTML = `Số bước của bạn: 30`;
 
     shuffle(currentCards).forEach((el) => {
         const card = document.createElement('div');

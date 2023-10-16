@@ -161,12 +161,14 @@ body {
 .available {
   border-radius: 0.3rem;
   color: var(--white);
-  font-size: 3rem;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: bold;
   padding: 5px 20px;
   text-align: center;
 }
-
+.rules{
+  font-size: 0.7rem;
+}
 .card-container {
   display: grid;
   grid-gap: 1rem;
@@ -599,6 +601,9 @@ table.dataTable thead .sorting_desc_disabled:before {
   .title{
     width: 50%;
   }
+  .rules{
+    font-size: 0.6rem;
+  }
   .lable-list-win{
     font-size: 20px!important;
   }
@@ -606,6 +611,7 @@ table.dataTable thead .sorting_desc_disabled:before {
     order: 2;
     margin-top: 15px;
   }
+
   #content-right{
     order: 1;
     margin-top: 15px;
@@ -622,6 +628,9 @@ table.dataTable thead .sorting_desc_disabled:before {
   }
   .container{
     height: 2900px;
+  }
+  .available {
+    font-size: 14px;
   }
   .tableUserResult{
     height: 700px; overflow: auto;overflow-x: hidden;
@@ -687,6 +696,7 @@ table.dataTable thead .sorting_desc_disabled:before {
     display: flex;
     height: 50px;
   }
+
   #dtBasicExample_length{
     justify-content: center;
     display: flex;
@@ -697,6 +707,7 @@ table.dataTable thead .sorting_desc_disabled:before {
     display: flex;
     height: 70px;
    }
+
   .title{
     width: 70%;
   }
@@ -706,12 +717,16 @@ table.dataTable thead .sorting_desc_disabled:before {
   .container{
     height: 3000px;
   }
+  
   .tabMenu{
     width: 24%!important;
   }
  
   #content-left{
     order: 2;
+  }
+  .rules{
+    font-size: 0.5rem;
   }
   #content-right{
     order: 1;
@@ -759,10 +774,7 @@ table.dataTable thead .sorting_desc_disabled:before {
   font-size: 9px;
   padding: 20px 0px;
 }
-.available{
-  padding: 5px 10px;
-  font-size: 25px;
-}
+
 .card-container{
   grid-template-columns: repeat(3, 1fr);
 }
@@ -909,6 +921,9 @@ h2{
     font-size: 13px!important;
     padding:10px 30px!important;
   }
+.availiblemb{
+  font-size: 12px !important;
+}
   .notification{
     display: none!important;
   }

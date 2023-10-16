@@ -41,7 +41,7 @@
             <a class="subtitle titleHeader" href="#game">Trí nhớ vàng</a>
         </div>
         <div class="movement tabMenu">
-            <a class="subtitle titleHeader">Danh sách trúng thưởng</a>
+            <a class="subtitle titleHeader" href="#list">Danh sách trúng thưởng</a>
         </div>
         <div class="movement tabMenu">
             <a class="subtitle titleHeader" href="#post">Bài viết</a>
@@ -78,15 +78,14 @@
             <div class="tilte-header" id="gamee">
                 <h1 class="title">Trí Nhớ Vàng</h1>
             </div>
+            <div id="notification" style=" position: absolute;width: 500px; z-index: 4; margin: 0 0;">
+            </div>
             <div class="content-right-mobile">
-                <div id="notificationMobile" style="position: absolute; margin-top: -100px;">
-                </div>
                 <div class="movement">
                     <h1 class="title-time">Thời Gian : <span id="timer-mobile">0:00</span></h1>
                 </div>
                 <div class="movement">
-                    <h3 class="subtitle">Bước còn lại: </h3>
-                    <div class="available" id="available-mobile"></div>
+                    <h3 class="available availiblemb" id="available-mobile"></h3>
                 </div>
             </div>
 
@@ -95,46 +94,58 @@
                     <section class="card-container"></section>
                 </div>
                 <div class="content-right">
-                    <div id="notification" style="position: absolute; margin-top: -100px;">
-                    </div>
+
                     <div class="timeDown">
                         <h1 class="title-time">Thời Gian : <span id="timer">0:00</span></h1>
                     </div>
                     <div class="movement">
-                        <h3 class="subtitle">Số bước còn lại : <div class="available" id="available"></div>
-                        </h3>
-
+                        <h3 class="available" id="available"></h3>
                     </div>
                     <div class="instructions">
                         <h2>Thể lệ trò chơi</h2>
-                        <p>
+                        <p class="rules" >
+                            - Số lần tham gia trò chơi: Không giới hạn</br>
                             - 1 lần sẽ lật 2 ảnh</br>
-                            - 2 ảnh giống nhau thì sẽ biến mất</br>
-                            - 2 ảnh không giống nhau thì lật lại để tìm ảnh giống nhau (kiểu. người chơi phải nhớ vị
-                            trí
-                            ảnh mình đã lật)</br>
+                            - 2 ảnh giống nhau thì sẽ được hiển thị ở vị trí mở và giữ nguyên cho đến khi game kết thúc</br>
+                            - 2 ảnh không giống nhau thì 2 ảnh sẽ tự động lật lại ( Người chơi phải nhớ vị trí ảnh mình đã lật để tìm ra ảnh giống nhau)</br>
                             - Số lượng ảnh: 12 ảnh</br>
                             - Thời gian chơi: 3 phút</br>
+
+                            Cơ cấu giải thưởng:</br>
                             - Dựa vào thời gian để tính số tiền giảm:</br>
-                            + Dưới 30s: giảm 300K</br>+ Từ 30s đên 60s: giảm 200K</br> + Trên 60s: giảm 100K</p>
+                            + Dưới 30s: giảm 300K</br>
+                            + Từ 30s đên 60s: giảm 200K</br>
+                            + Trên 60s: giảm 100K</br>
+
+                            - Đặt biệt: </br>
+                            ->Top 1 thời gian hoàn thành ngắn nhất trong ngày: giảm 400K </br>
+                            ->Top 1  thời gian hoàn thành ngắn nhất trong tháng: giảm 600K</p>
                     </div>
 
                 </div>
                 <div class="introGameMobile">
                     <h2>Thể lệ trò chơi</h2>
-                    <p>
+                    <p >
+                        - Số lần tham gia trò chơi: Không giới hạn</br>
                         - 1 lần sẽ lật 2 ảnh</br>
-                        - 2 ảnh giống nhau thì sẽ biến mất</br>
-                        - 2 ảnh không giống nhau thì lật lại để tìm ảnh giống nhau (kiểu. người chơi phải nhớ vị
-                        trí ảnh mình đã lật)</br>
+                        - 2 ảnh giống nhau thì sẽ được hiển thị ở vị trí mở và giữ nguyên cho đến khi game kết thúc</br>
+                        - 2 ảnh không giống nhau thì 2 ảnh sẽ tự động lật lại ( Người chơi phải nhớ vị trí ảnh mình đã lật để tìm ra ảnh giống nhau)</br>
                         - Số lượng ảnh: 12 ảnh</br>
                         - Thời gian chơi: 3 phút</br>
+
+                        Cơ cấu giải thưởng:</br>
                         - Dựa vào thời gian để tính số tiền giảm:</br>
-                        + Dưới 30s: giảm 300K</br>+ Từ 30s đên 60s: giảm 200K</br> + Trên 60s: giảm 100K</p>
+                        + Dưới 30s: giảm 300K</br>
+                        + Từ 30s đên 60s: giảm 200K</br>
+                        + Trên 60s: giảm 100K</br>
+
+                        - Đặt biệt: </br>
+                        ->Top 1 thời gian hoàn thành ngắn nhất trong ngày: giảm 400K </br>
+                        ->Top 1  thời gian hoàn thành ngắn nhất trong tháng: giảm 600K</p>
                 </div>
             </div>
             <div class="listCustomer" id="content-right">
-                <div class="tabs">
+                <div class="tabs" id="list">
                     <div class="tab-2">
                         <label class="lable-list-win" for="tab2-1">Danh sách trúng thưởng theo ngày</label>
                         <input id="tab2-1" name="tabs-two" type="radio" checked="checked">
