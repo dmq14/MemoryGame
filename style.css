@@ -48,7 +48,7 @@ body {
 }
 .container{
   max-width: 1920px;
-  height: 3000px;
+  height: 3100px;
 }
 .content {
   margin: 0 auto;
@@ -445,7 +445,7 @@ button:before {
 }
 .listCustomer{
   margin-top: 15px;
-  height: 500px!important;
+  height: 700px!important;
   padding: 10px;
   border: 2px solid #262626;
   background: rgba(69, 69, 69, 0.2);
@@ -470,29 +470,16 @@ button:before {
 }
 
 .titleList{
-  font-size: 1rem;
+  font-size: 1.8rem;
   
 }
 .list-table{
   border-collapse: collapse;
   width: 100%;
 }
-.list-table th td{
-  border: 1px solid rgb(167, 159, 159);
-  padding: 8px;
-  text-align: left;
+.tableUserResult{
+  height: 500px; overflow: auto;overflow-x: hidden;
 }
-.list-table th{
-  font-size: 0.7rem;
-  border: 1px solid rgb(255, 255, 255);
-
-}
-.list-table td{
-  font-size: 0.6rem;
-  border: 1px solid rgb(255, 255, 255);
-
-}
-
 .btn-c{
   background-color: #461c6d;
   width: 15%;
@@ -529,7 +516,10 @@ table.dataTable thead .sorting_desc_disabled:before {
     font-size: 16px!important;
   }
   .container{
-    height: 2700px;
+    height: 2800px;
+  }
+  .tableUserResult{
+    height: 600px; overflow: auto;overflow-x: hidden;
   }
   .posts{
     flex-direction: column;
@@ -587,7 +577,7 @@ table.dataTable thead .sorting_desc_disabled:before {
  
 @media screen and (max-width: 769px) {
   .container{
-    height: 2600px;
+    height: 2800px;
   }
   .tabMenu{
     width: 24%!important;
@@ -599,7 +589,9 @@ table.dataTable thead .sorting_desc_disabled:before {
   #content-right{
     order: 1;
   }
-  
+  .tableUserResult{
+    height: 600px; overflow: auto;overflow-x: hidden;
+  }
   .titleHeader{
     font-size: 11px!important;
     color: #f5f5f5!important;
@@ -671,6 +663,9 @@ h2{
   #content-right{
     order: 1;
    
+  }
+  .tableUserResult{
+    height: 600px; overflow: auto;overflow-x: hidden;
   }
   .menuBar{
     width: 100%;
@@ -771,7 +766,7 @@ h2{
     display: none!important;
   }
   .container{
-    height: 2500px;
+    height: 3000px;
   }
   .modal-container{
     width: 350px;
@@ -787,6 +782,12 @@ h2{
 }
 .header{
   height: 30px!important;
+}
+.tableUserResult{
+  height: 670px; overflow: auto;overflow-x: hidden;
+}
+.listCustomer{
+  height: 800px!important;
 }
 .tabMenu{
   width: 24%!important;
