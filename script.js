@@ -316,11 +316,8 @@ function checkTime(){
 }
 $("#dataForm").submit(function(e) {
     e.preventDefault(); // ngăn chặn việc tải lại trang
-    var name = $("#name").val();
-    var phone = $("#phone").val();
     var CodeWin=checkTime(minutes,seconds);
     checkTime(minutes,seconds)
-    const info= `${name}' ${phone}s`;
     success.innerHTML = `Bạn đã trúng : ${CodeWin.description} </br> Đây là mã của bạn: `;
     coupon.innerHTML = `${CodeWin.code}`;
     modal.classList.remove('modal--open');

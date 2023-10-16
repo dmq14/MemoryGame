@@ -37,6 +37,7 @@ body {
     background: rgba(69, 69, 69, 0.2);
     border-radius: 10px;
     color: #f5f5f5;
+   
 }
 .content-right-mobile{
   display: none;
@@ -89,9 +90,26 @@ body {
   display: flex;
   justify-content: center;
   margin-bottom: 1rem;
- 
+  display: flex;
+  flex-direction: column;
 }
-
+.menuBar{
+  width: 80%;
+  display: flex;
+  margin: 10px;
+  justify-content: center;
+  cursor: pointer;
+}
+.tabMenu{
+  width: 20%;
+  margin:10px;
+  display: block;
+  text-align: center;
+}
+.titleHeader{
+ 
+  color: #f5f5f5!important;
+}
 .movement {
   margin-top: 30px;  
   display: flex;
@@ -357,10 +375,11 @@ button:before {
   display: flex;
   width: 100%;
   height: 100%;
-  justify-content: space-between;
-  margin-top: 30px;
+  justify-content: space-between; 
+  margin-top: 13px;
 }
 .listPost{
+  border: 2px solid #262626;
   background: rgba(69, 69, 69, 0.2)!important;
   display: flex;
   flex-direction: column;
@@ -418,6 +437,7 @@ button:before {
   background: rgba(69, 69, 69, 0.2);
   border-radius: 10px;
   color: #f5f5f5;
+  display: none;
 }
 .content-left{
   width: 78%;
@@ -427,15 +447,15 @@ button:before {
   border-radius: 10px;
 }
 .content-right{
-  width: 21%;
+  width: 20%;
   height: 100%;
-  padding-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .listCustomer{
   width: 21%;
+  display: flex;
 }
 .titleList{
   font-size: 1rem;
@@ -466,6 +486,7 @@ button:before {
   width: 15%;
   color: #fff
 }
+
 @media screen and (max-width: 1025px) {
   #content-left{
     order: 2;
@@ -475,6 +496,10 @@ button:before {
     order: 1;
     margin-top: 0;
   }
+  .menuBar{
+    width: 95%;
+  }
+
   .container{
     height: 2300px;
   }
@@ -502,6 +527,7 @@ button:before {
     margin-top: 30px;
     width: 100%;
     justify-content: center;
+    display: flex;
   }
   .modal-container{
     padding-top: 47px;
@@ -539,6 +565,11 @@ button:before {
   }
   #content-right{
     order: 1;
+  }
+  .titleHeader{
+    font-size: 11px!important;
+    color: #f5f5f5!important;
+    padding:10px 0 !important;
   }
   .modal-container{
     padding-top: 20px;
@@ -595,6 +626,7 @@ h2{
 }
 }
 @media screen and (max-width:600px){
+ 
   .notification{
     display: none!important;
   }
@@ -606,6 +638,18 @@ h2{
     order: 1;
    
   }
+  .menuBar{
+    width: 100%;
+    justify-content: space-between;
+  }
+  .tabMenu{
+    width: 24%!important;
+  }
+  .titleHeader{
+    font-size: 0.5rem!important;
+    padding: 5px 0!important;
+  }
+
   .listPost{
     margin-top: 20px;
   }
@@ -634,7 +678,7 @@ h2{
   .introGameMobile{
     display: inline;
     font-size: 15px;
-    margin-top: 30px;
+    margin-top: 15px;
     padding: 10px;
     border: 2px solid #262626;
     background: rgba(69, 69, 69, 0.2);
@@ -654,7 +698,7 @@ h2{
  .movement{
   margin: 0;
   margin-bottom: 30px;
-  height: 40px;
+  height: 30px;
   width: 40%;
   display: flex;
   justify-content: space-around;
@@ -664,7 +708,7 @@ h2{
   font-size: 15px;
  }
  .title-time{
-  padding-top:10px;
+  padding-top:4px;
   font-size: 15px;
  }
  #timer-mobile{
@@ -672,7 +716,7 @@ h2{
   font-family: Arial, Helvetica, sans-serif;
  }
  #available-mobile{
-  padding:5px 0;
+  padding: 0 !important;;
   font-size: 18px;
  }
  .instructions-mobile{
@@ -734,8 +778,10 @@ h2{
   }
   .subtitle{
    font-size: 12px;
+   padding:5px 0 !important;
   }
   .title-time{
+    padding:5px 0 !important;
    font-size: 12px;
   }
   #timer-mobile{
@@ -744,7 +790,7 @@ h2{
    font-family: Arial, Helvetica, sans-serif;
   }
   #available-mobile{
-   font-size: 14px;
+   font-size: 16px;
   }
   .instructions-mobile{
     color: #f5f5f5!important;
