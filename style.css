@@ -104,7 +104,7 @@ body {
   cursor: pointer;
 }
 .tabMenu{
-  width: 20% !important;
+  width: 15% !important;
   margin:10px;
   display: block;
   text-align: center;
@@ -112,8 +112,9 @@ body {
 
 }
 .titleHeader{
- 
+  font-size: 20px!important;
   color: #f5f5f5!important;
+  text-decoration: none;
 }
 .movement {
   margin-top: 30px;  
@@ -521,9 +522,14 @@ table.dataTable thead .sorting_desc_disabled:before {
   .menuBar{
     width: 95%;
   }
-
+  .tabMenu{
+    width: 25%!important;
+  }
+  .titleHeader{
+    font-size: 16px!important;
+  }
   .container{
-    height: 2300px;
+    height: 2700px;
   }
   .posts{
     flex-direction: column;
@@ -580,12 +586,20 @@ table.dataTable thead .sorting_desc_disabled:before {
   }
  
 @media screen and (max-width: 769px) {
+  .container{
+    height: 2600px;
+  }
+  .tabMenu{
+    width: 24%!important;
+  }
+ 
   #content-left{
     order: 2;
   }
   #content-right{
     order: 1;
   }
+  
   .titleHeader{
     font-size: 11px!important;
     color: #f5f5f5!important;
@@ -646,7 +660,7 @@ h2{
 }
 }
 @media screen and (max-width:600px){
- 
+  
   .notification{
     display: none!important;
   }
@@ -662,8 +676,12 @@ h2{
     width: 100%;
     justify-content: space-between;
   }
+  .header{
+    height: 50px!important;
+  }
   .tabMenu{
     width: 24%!important;
+    margin:0 5px!important;
   }
   .titleHeader{
     font-size: 0.5rem!important;
@@ -674,7 +692,7 @@ h2{
     margin-top: 20px;
   }
   .container{
-    height: 2700px;
+    height: 3000px;
   }
   .modal-container{
     width: 350px;
@@ -767,11 +785,22 @@ h2{
 .modal-title {
   font-size: 17px;
 }
-  
+.header{
+  height: 30px!important;
+}
+.tabMenu{
+  width: 24%!important;
+  margin:0 5px!important;
+  height: 25px!important;
+}
+.titleHeader{
+  font-size: 0.4rem!important;
+  padding: 3px 0!important;
+}
   .introGameMobile{
     display: inline;
     font-size: 15px;
-    margin-top: 30px;
+    margin-top: 15px;
     padding: 10px;
     border: 2px solid #262626;
     background: rgba(69, 69, 69, 0.2);
