@@ -351,3 +351,8 @@ readMoreButton.addEventListener('click', function () {
     readMoreButton.textContent = 'Xem thêm';
   }
 });
+
+$(document).ready(function () {
+    $('#dtBasicExample').DataTable();
+    $('.dataTables_length').addClass('bs-select');
+  });
