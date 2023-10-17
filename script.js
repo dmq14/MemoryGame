@@ -1,34 +1,34 @@
 const CARDS = [
     {
         id: 1,
-        name: 'javascript',
-        img: 'https://khoavang.vn/resources/cache/195x195x3/A-Khoi-Hinh-anh/IMG_3400-1695272268.jpg'
+        name: 'KeyBoard',
+        img: 'https://dev.khoavang.vn/resources/uploads/baohanh/MemoryGame/banphim-1697509996.png',
     },
     {
         id: 2,
-        name: 'css3',
-        img: 'https://khoavang.vn/resources/cache/195x195x3/data/banner_home/san-pham/msi-katana-15-rtx-4070/msi-katana-15-rtx-4070-ben-1696927588.jpg'
+        name: 'Gaming',
+        img: 'https://dev.khoavang.vn/resources/uploads/baohanh/MemoryGame/laptop3-1697510342.png'
     },
     {
         id: 3,
-        name: 'html5',
-        img: 'https://khoavang.vn/resources/cache/195x195x3/Toan/Other/7b19a43069693d55940f5ba2e2b3c710-1689235893.png'
+        name: 'Laptop',
+        img: 'https://dev.khoavang.vn/resources/uploads/baohanh/MemoryGame/laptop2-1697509996.png'
     },
     {
         id: 4,
-        name: 'safari',
+        name: 'Marshall',
         img:
-            'https://khoavang.vn/resources/cache/195x195x3/EDIFIER/Loa-Q35D/Loa-EDIFIER-Q35D---Khoa-Vang--1-1684645297.jpg'
+            'https://dev.khoavang.vn/resources/uploads/baohanh/MemoryGame/loa-1697509996.png'
     },
     {
         id: 5,
-        name: 'rails',
-        img: 'https://khoavang.vn/resources/cache/195x195x3/DuongPV/PC/May-rap/Case-Jonsbo-D31/Case-Jonsbo-D31---Khoa-Vang--1-1681888993.jpg'
+        name: 'PC',
+        img: 'https://dev.khoavang.vn/resources/uploads/baohanh/MemoryGame/PC-1697509996.png'
     },
     {
         id: 6,
-        name: 'node',
-        img: 'https://khoavang.vn/resources/cache/195x195x3/A-Khoi-Hinh-anh/IMG_2608-1694326918.jpg'
+        name: 'HeadPhone',
+        img: 'https://dev.khoavang.vn/resources/uploads/baohanh/MemoryGame/tainghe2-1697510084.png'
     }
 
 ];
