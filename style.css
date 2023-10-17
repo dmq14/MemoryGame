@@ -798,6 +798,7 @@ h2{
   .notification{
     display: none!important;
   }
+  
   #content-left{
     order: 2;
    
@@ -974,7 +975,7 @@ h2{
    margin: 0;
    margin-bottom: 30px;
    height: 35px;
-   width: 40%;
+   width: 45%;
    display: flex;
    justify-content: space-around;
   }
@@ -994,7 +995,8 @@ h2{
    font-family: Arial, Helvetica, sans-serif;
   }
   #available-mobile{
-   font-size: 16px;
+    margin-top: 5px;
+   font-size: 13px;
   }
   .instructions-mobile{
     color: #f5f5f5!important;
@@ -1008,6 +1010,7 @@ h2{
     height: 5.5rem;
   }
   .title{
-    font-size: 35px;
+    height: 100%;
+    font-size: 28px;
   }
  }
