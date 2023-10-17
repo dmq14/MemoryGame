@@ -78,9 +78,10 @@ body {
 }
 .title-time{
   color: var(--bridal-heath);
-  font-size: 17px;
+  font-size: 18px;
   padding: 15px;
   margin: 0;
+  font-weight: bold;
 }
 #timer{
   font-size: 22px;
@@ -161,14 +162,12 @@ body {
 .available {
   border-radius: 0.3rem;
   color: var(--white);
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 1.2rem;
+  font-weight: 600;
   padding: 5px 20px;
   text-align: center;
 }
-.rules{
-  font-size: 0.7rem;
-}
+
 .card-container {
   display: grid;
   grid-gap: 1rem;
@@ -181,7 +180,7 @@ body {
   border: 0.2rem solid var(--dark-gray);
   border-radius: 0.25rem;
   cursor: pointer;
-  height: 13rem;
+  height: 15rem;
   position: relative;
   transform-style: preserve-3d;
   transition: transform 500ms ease-in-out;
@@ -483,7 +482,7 @@ button:before {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .titleList{
@@ -601,9 +600,6 @@ table.dataTable thead .sorting_desc_disabled:before {
   .title{
     width: 50%;
   }
-  .rules{
-    font-size: 0.6rem;
-  }
   .lable-list-win{
     font-size: 20px!important;
   }
@@ -611,7 +607,6 @@ table.dataTable thead .sorting_desc_disabled:before {
     order: 2;
     margin-top: 15px;
   }
-
   #content-right{
     order: 1;
     margin-top: 15px;
@@ -627,13 +622,10 @@ table.dataTable thead .sorting_desc_disabled:before {
     font-weight: bold!important;
   }
   .container{
-    height: 2900px;
-  }
-  .available {
-    font-size: 14px;
+    height: 3000px;
   }
   .tableUserResult{
-    height: 700px; overflow: auto;overflow-x: hidden;
+    height: 640px; overflow: auto;overflow-x: hidden;
   }
   .posts{
     flex-direction: column;
@@ -673,7 +665,7 @@ table.dataTable thead .sorting_desc_disabled:before {
     margin-top: -47px;
   }
   .card{
-    height: 11.5rem;
+    height: 13.5rem;
   }
   .instructions{
     font-size: 12px;
@@ -691,12 +683,14 @@ table.dataTable thead .sorting_desc_disabled:before {
   }
  
 @media screen and (max-width: 769px) {
-  #dtBasicExample2_length{
+  label{
+    padding: 0 !important;
+  }
+  #dtBasicExample2  _length{
     justify-content: center;
     display: flex;
     height: 50px;
   }
-
   #dtBasicExample_length{
     justify-content: center;
     display: flex;
@@ -707,7 +701,6 @@ table.dataTable thead .sorting_desc_disabled:before {
     display: flex;
     height: 70px;
    }
-
   .title{
     width: 70%;
   }
@@ -715,9 +708,8 @@ table.dataTable thead .sorting_desc_disabled:before {
     font-size: 17px!important;
   }
   .container{
-    height: 3000px;
+    height: 2800px;
   }
-  
   .tabMenu{
     width: 24%!important;
   }
@@ -725,17 +717,14 @@ table.dataTable thead .sorting_desc_disabled:before {
   #content-left{
     order: 2;
   }
-  .rules{
-    font-size: 0.5rem;
-  }
   #content-right{
     order: 1;
   }
   .listCustomer{
-    height: 900px!important;
+    height: 750px!important;
   }
   .tableUserResult{
-    height: 770px; overflow: auto;overflow-x: hidden;
+    height: 670px; overflow: auto;overflow-x: hidden;
   }
   .titleHeader{
     font-size: 11px!important;
@@ -774,7 +763,10 @@ table.dataTable thead .sorting_desc_disabled:before {
   font-size: 9px;
   padding: 20px 0px;
 }
-
+.available{
+  padding: 5px 10px;
+  font-size: 12px;
+}
 .card-container{
   grid-template-columns: repeat(3, 1fr);
 }
@@ -815,10 +807,10 @@ h2{
    
   }
   .listCustomer{
-    height: 850px!important;
+    height: 830px!important;
   }
   .tableUserResult{
-    height: 800px; overflow: auto;overflow-x: hidden;
+    height: 780px; overflow: auto;overflow-x: hidden;
   }
   
   .menuBar{
@@ -842,7 +834,7 @@ h2{
     margin-top: 20px;
   }
   .container{
-    height: 3200px;
+    height: 3300px;
   }
   .modal-container{
     width: 350px;
@@ -921,14 +913,11 @@ h2{
     font-size: 13px!important;
     padding:10px 30px!important;
   }
-.availiblemb{
-  font-size: 12px !important;
-}
   .notification{
     display: none!important;
   }
   .container{
-    height: 3000px;
+    height: 3200px;
   }
   .modal-container{
     width: 350px;
@@ -946,10 +935,10 @@ h2{
   height: 30px!important;
 }
 .tableUserResult{
-  height: 910px; overflow: auto;overflow-x: hidden;
+  height: 930px; overflow: auto;overflow-x: hidden;
 }
 .listCustomer{
-  height: 950px!important;
+  height: 880px!important;
 }
 .tabMenu{
   width: 25%!important;
@@ -997,6 +986,7 @@ h2{
   .title-time{
     padding:5px 0 !important;
    font-size: 12px;
+   font-weight: bold;
   }
   #timer-mobile{
     font-weight: 600;
